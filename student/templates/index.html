@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 Student Health Prediction</h1>
+        <p>Enter your details to check your health status</p>
+        <form action="/predict" method="post">
+            <label>Age:</label>
+            <input type="number" name="age" required>
+
+            <label>BMI (Body Mass Index):</label>
+            <input type="number" name="bmi" step="0.1" required>
+
+            <label>Exercise (days per week):</label>
+            <input type="number" name="exercise" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

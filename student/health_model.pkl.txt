@@ -1,0 +1,30 @@
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+import pickle
+
+# Sample Dataset
+data = {
+    'age': [18, 22, 25, 30, 35, 40, 50, 55, 60, 65],
+    'bmi': [22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
+    'exercise': [3, 4, 2, 5, 1, 6, 2, 7, 0, 1],
+    'health_status': [1, 1, 1, 1, 0, 0, 0, 0, 0, 0]  # 1=Healthy, 0=At-risk
+}
+
+df = pd.DataFrame(data)
+
+# Split Data
+X = df[['age', 'bmi', 'exercise']]
+y = df['health_status']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train Model
+model = RandomForestClassifier()
+model.fit(X_train, y_train)
+
+# Save Model
+with open('health_model.pkl', 'wb') as file:
+    pickle.dump(model, file)
+
+print("Model saved as health_model.pkl")

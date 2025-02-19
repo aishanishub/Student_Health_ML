@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff6b81);
+    color: white;
+    padding: 20px;
+}
+
+/* Container Box */
+.container {
+    background: linear-gradient(135deg, #ffffff, #f7f7f7);
+    padding: 30px;
+    border-radius: 15px;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    color: black;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    background: -webkit-linear-gradient(135deg, #ff6b81, #ff0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    font-size: 1.2em;
+    color: #444;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 12px;
+    font-size: 1.1em;
+    border: 2px solid #ff758c;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #ff0080;
+    box-shadow: 0px 0px 10px rgba(255, 0, 128, 0.5);
+}
+
+/* Button Styles */
+button {
+    background: linear-gradient(135deg, #ff0080, #ff6b81);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff3e7f, #ff758c);
+    transform: scale(1.05);
+}
+
+/* Result Page Styling */
+.result {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ff0080;
+    margin-top: 20px;
+}
+
+/* Back Link */
+a {
+    text-decoration: none;
+    color: #ff0080;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ff3e7f;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
